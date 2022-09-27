@@ -11,7 +11,7 @@
     --border-color-orange:  rgba(247, 140, 46, 1);
 }
 body{
-    max-width: 1440px;
+    /* max-width: 1440px; */
     margin: auto;
     
 }
@@ -31,13 +31,13 @@ h2{
     text-transform: uppercase;
 }
 h3{
-    font-size: 1.5em; 
+    font-size: 1.7em; 
 }
 p{
-    font-size: .8em;
+    font-size: 1em;
 }
 a{
-    font-size: 1em;
+    font-size: 1.2em;
 }
 /* Customization */
 .text-white{
@@ -57,7 +57,7 @@ a{
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0.6);
     padding: 20px 10px;
-    width: 1440px;
+    width: 100%;
 }
 
 .header a{
@@ -93,6 +93,9 @@ a{
 
 #myLinks, .menu, .mob-nav{
     display: none;
+}
+.logo-mob p{
+    font-size: 2em;
 }
 
 @media screen and (max-width: 1000px){
@@ -176,101 +179,16 @@ a{
     flex-direction: column;
     align-items: center;
 }
-
-/* service-page */
-#service-page{
-    margin: 20px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-.title h2{
-    color: black;
-    font-weight: 800;
-    text-align: center;
-    padding: 70px 50px;
-    text-transform: uppercase;
-}
-.title-card h3{
-    padding: 10px;
-    font-size: 24px;
-}
-.bot-content{
-    height:  30%;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px 20px;
-    border-bottom-left-radius: 1em;
-    border-bottom-right-radius: 1em;
-}
-.bot-content p{
-    font-size: 18px;
-    line-height: 1.5em;
-}
-.card{
-
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    width: 300px;
-    height: 400px;
-    border-radius: 1em;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
-
-    /* card's background */
-    background-position: center;
-    background-size: cover;
-    }
-
-    /* Cards */
-#card-1{
-    background-image: url(./images/waxandclay.jpg);
-}
-#card-2{
-    background-image: url("https://images.unsplash.com/photo-1583419960376-d2037c49ffed?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
-}
-#card-3{
-    background-image: url("https://images.unsplash.com/photo-1627503292253-dd54564d3b28?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
-}
-#card-4{
-    background-image: url("https://images.unsplash.com/photo-1560037962-a00331b63f72?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
-}
-#card-5{
-    background-image: url("https://images.unsplash.com/photo-1565534384095-5d329610fa16?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
-}
-#card-6{
-    background-image: url(./images/waxandclay.jpg);
-}
-
-.container{
-    width: 80%;
-}
-
-.media-stroller{
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 350px;
-    overflow-x: auto;
-    overscroll-behavior-inline: contain;
-    overflow: scroll;
-    padding:  30px 10px;
-}
-.snaps-inline{
-    scroll-snap-type: inline mandatory;
-    scroll-padding-inline: var(1em, 1rem);
-}
-.snaps-inline >*{
-    scroll-snap-align: start;
-} 
-
 /* .about-page */
 #about-page{
     background-image:url('images/whitebackground.png');
+    display: block;
 
 }
 .about-container{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 
 }
 .title-content{
@@ -334,3 +252,82 @@ a{
 }
 
 
+/* service section */
+
+#service-page{
+    background-color: rgba(36, 40, 47, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#service-page > .title > h2{
+    color: var(--text-color-light);
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.mySlides{
+    display: none;
+    grid-auto-flow: column;
+
+}
+.slideshow-container{
+    position: relative;
+    padding: 20px;
+
+}
+.mySlides > img{
+        width: 100%;
+        max-width: 700px;
+        height: auto;
+
+}
+.text-container{
+    max-width: 500px;
+    display: grid;
+    justify-items: center;
+    padding: 20px 0;
+    background-color:rgba(217, 217, 217, 1);
+}
+.text-container h3, p{
+    color: var(--text-color-dark);
+}
+.text-container p{
+    padding: 20px 10px;
+}
+
+.prev, .next{
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+.next{
+    right: 60%;
+    border-radius: 3px 0 0 3px;
+}
+.prev{
+    left: 25%;
+}
+.prev:hover, .next:hover{
+    background-color: rgba(0,0,0,0.8);
+}
+@media screen and (max-width: 1000px){
+    .mySlides > img{
+        display: none;
+    }
+    .mySlides .text-container{
+        width: 100%;
+        border-radius: 20px;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 15px 0 rgba(0, 0, 0, 0.19);
+
+
+    }
+}
